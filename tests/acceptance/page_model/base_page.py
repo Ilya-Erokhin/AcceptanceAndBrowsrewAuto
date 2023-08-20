@@ -1,4 +1,5 @@
 from tests.acceptance.locators.base_page import BasePageLocators
+
 '''
 BasePage represents things, that are sharing between ALL pages
 '''
