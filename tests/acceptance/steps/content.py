@@ -2,6 +2,8 @@ from behave import *
 
 from tests.acceptance.page_model.base_page import BasePage
 from tests.acceptance.page_model.blog_page import BlogPage
+from tests.acceptance.page_model.new_post_page import NewPostPage
+from tests.acceptance.page_model.post_page import PostPage
 
 use_step_matcher('re')
 
@@ -13,7 +15,6 @@ def step_impl(context):
 
 # Checking the title of that page is correct
     assert page.title.is_displayed()
-
 
 @step('The title tag has the content "(.*)"')
 def step_impl(context, content):
@@ -37,3 +38,17 @@ def step_impl(context, title):
     assert len(posts_with_title) > 0
 # We can see all posts there
     assert all([post.is_displayed() for post in posts_with_title])
+
+
+@then('The title tag has the content "(.*)"')
+def step_impl(context, content):
+    page = PostPage(context.driver)
+
+    assert page.title.text == content
+
+
+@then('The post content has a "(.*)" content')
+def step_impl(context, content):
+    page = PostPage(context.driver)
+
+    assert page.content_text == content

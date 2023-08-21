@@ -26,11 +26,17 @@ Application testing (web-service), providing create a blogs with title and some 
 2. Checking the Title on the Home Page
 3. Checking correctness the tag of the Title
 
-**2. Successful display of created posts**
+**3. Correct display of the title on the New Post Page**
+### Steps:
+1. Open the New Post Page
+2. Checking the Title on the New Post Page
+3. Checking correctness the tag of the Title
+
+**4. Successful display of created posts**
 1. Open the Blog Page
 2. Wait until posts to load
 
-**3. Successful create a posts on Blog Page**
+**5. Successful create a posts on Blog Page**
 1. Open the Blog Page
 2. Press the "Create Post" button
 3. There is shown the Post Page
@@ -40,6 +46,21 @@ Application testing (web-service), providing create a blogs with title and some 
 7. There is shown Blog Page
 8. Wait until posts to load
 9. There is a post with title "Test Post" in the posts section
+
+**6. Correct display of the title on the Post Page**
+1. Open the Blog Page
+2. Press the "Create Post" button
+3. There is shown the Post Page
+4. Enter "Test Post" in the "title" field
+5. Enter "Test Content" in the content field
+6. Press the "submit" button
+7. There is shown Blog Page
+8. Wait until posts to load
+9. There is a post with title "Test Post2" in the posts section
+10. Click on the new created post
+11. Checking that the post was created
+12. Checking that the title has a "Test Title2" title
+13. Checking that the content has a "Test Content2" content
 
 #### Navigation Between Pages
 

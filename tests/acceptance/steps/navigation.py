@@ -4,6 +4,7 @@ from selenium import webdriver
 from tests.acceptance.page_model.blog_page import BlogPage
 from tests.acceptance.page_model.home_page import HomePage
 from tests.acceptance.page_model.new_post_page import NewPostPage
+from tests.acceptance.page_model.post_page import PostPage
 
 use_step_matcher('re')
 
@@ -38,4 +39,9 @@ def step_impl(context):
 @then('I am on the homepage')
 def step_impl(context):
     expected_url = HomePage(context.driver).url
+    assert context.driver.current_url == expected_url
+
+@then('I am on the post page')
+def step_impl(context):
+    expected_url = PostPage(context.driver).url
     assert context.driver.current_url == expected_url
